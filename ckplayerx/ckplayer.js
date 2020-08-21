@@ -214,7 +214,7 @@ function ckplayerConfig() {
 			skipAdTime: '{$second}秒后可跳过广告',
 			adLink: '查看详情',
 			noLoadShockwaveFlash:'您的浏览器不支持FlashPlayer插件或没有启用该插件',
-			downLoadShockwaveFlash:'点击下载FlashPlayer插件'
+			downLoadShockwaveFlash:'点击下载或开启FlashPlayer插件'
 		};
 		//全局变量：右键菜单：[菜单标题,类型(link:链接，default:灰色，function：调用函数，javascript:调用js函数),执行内容(包含链接地址，函数名称),[line(间隔线)]]
 		this.contextMenu = [['啊哩嘀哩播放器', 'link', 'https://www.alidli.com', '_blank'], ['CKPLYAER X1', 'default', 'line']];
@@ -5828,7 +5828,7 @@ function ckplayerConfig() {
 			this.V = this.getObjectById(vid); //V：定义播放器对象全局变量
 			this.playerType = 'flashplayer';
 			if(!this.checkShockwaveFlash()){
-				this.PD.innerHTML = '<p>'+this.language['noLoadShockwaveFlash']+'</p><p><a href="https://www.flash.cn/" target="_blank" style="color:#FFFFFF">'+this.language['downLoadShockwaveFlash']+'</a></p>';
+				this.PD.innerHTML = '<p>'+this.language['noLoadShockwaveFlash']+'</p><p><a href="http://www.adobe.com/go/getflash" target="_blank" style="color:#FFFFFF">'+this.language['downLoadShockwaveFlash']+'</a></p>';
 				this.css(this.PD,{color:'#FFFFFF',textAlign:'center',paddingTop:'40px'});
 			}
 		},
